@@ -2,7 +2,7 @@ server:
   port: 8085
 spring:
   datasource:
-    url: jdbc:mysql://58.181.51.186:3306/campus?serverTimezone=Asia/Seoul
+    url: jdbc:mysql://localhost:3306/campus?serverTimezone=Asia/Seoul
     username: myuser
     password: mypassword
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -12,8 +12,8 @@ spring:
         show_sql: true
         format_sql: true
   kafka:
-    bootstrap-servers: 58.181.51.186:9092,58.181.51.186:9093,58.181.51.186:9094
+    bootstrap-servers: localhost:9092,localhost:9093,localhost:9094
   data:
     redis:
-      host: 58.181.51.186
+      host: localhost
       port: 6379
