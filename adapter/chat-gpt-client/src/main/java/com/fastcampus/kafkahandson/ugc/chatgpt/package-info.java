@@ -1,0 +1,1 @@
+package com.fastcampus.kafkahandson.ugc.chatgpt;

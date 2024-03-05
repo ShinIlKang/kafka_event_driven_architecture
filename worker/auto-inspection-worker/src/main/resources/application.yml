@@ -1,0 +1,10 @@
+server:
+  port: 8082
+
+spring:
+  kafka:
+    bootstrap-servers: 58.181.51.186:9092,58.181.51.186:9093,58.181.51.186:9094
+
+external-server:
+  metadata:
+    url: http://58.181.51.186:8088

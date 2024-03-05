@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    url: jdbc:mysql://58.181.51.186:3306/campus?serverTimezone=Asia/Seoul
+    username: myuser
+    password: mypassword
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+  kafka:
+    bootstrap-servers: 58.181.51.186:9092,58.181.51.186:9093,58.181.51.186:9094
+  data:
+    mongodb:
+      uri: mongodb://rootuser:1234@58.181.51.186:27017/campus?authSource=admin
+    redis:
+      host: 58.181.51.186
+      port: 6379
+    elasticsearch:
+      host: 58.181.51.186
+      port: 9200
+external-server:
+  metadata:
+    url: http://58.181.51.186:8088/
