@@ -12,7 +12,6 @@ import java.time.LocalDateTime;
 @Data
 @Entity(name = "coupon")
 public class CouponEntity {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
