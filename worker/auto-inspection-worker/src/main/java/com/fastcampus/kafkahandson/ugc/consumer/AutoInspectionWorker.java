@@ -39,10 +39,10 @@ public class AutoInspectionWorker {
 
     private void handleCreate(OriginalPostMessage originalPostMessage) {
         InspectedPost inspectedPost = postInspectUsecase.inspectAndGetIfValid(
-                OriginalPostMessageConverter.toModel(originalPostMessage)
-        );
-        if (inspectedPost == null) {
-            return;
+                    OriginalPostMessageConverter.toModel(originalPostMessage)
+            );
+            if (inspectedPost == null) {
+                return;
         }
         inspectedPostMessageProducePort.sendCreateMessage(inspectedPost);
     }

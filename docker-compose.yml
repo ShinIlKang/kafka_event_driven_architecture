@@ -140,6 +140,8 @@ services:
     container_name: filebeat
     volumes:
       - ./.data/tomcat/logs:/usr/share/filebeat/logs
+      - ./.data/filebeat/data:/usr/share/filebeat/data
+      - ./filebeat.yml:/usr/share/filebeat/filebeat.yml
     depends_on:
       - logstash
       - zookeeper
@@ -151,6 +153,8 @@ services:
     container_name: logstash
     ports:
       - "5044:5044"
+    volumes:
+      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
     depends_on:
       - elasticsearch
       - zookeeper

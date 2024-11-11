@@ -10,6 +10,7 @@ version = '0.0.1-SNAPSHOT'
 subprojects {
 	apply plugin: 'java'
 	apply plugin: 'idea'
+
 	sourceCompatibility = JavaVersion.VERSION_17
 
 	gradle.projectsEvaluated {
