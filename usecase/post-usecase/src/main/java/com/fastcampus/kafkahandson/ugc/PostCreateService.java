@@ -16,7 +16,7 @@ public class PostCreateService implements PostCreateUsecase {
     @Transactional
     @Override
     public Post create(Request request) {
-        Post post =  postPort.save(
+        Post post = postPort.save(
             Post.generate(
                 request.getUserId(),
                 request.getTitle(),
